@@ -10,26 +10,27 @@ El código desarrollado se divide en dos partes: el Practica 1.1 y Practica 1.2.
 #### 1. Servidor (`server.ipynb`)
 
 ## Ejecución del código 
-1. Abre una terminal o línea de comandos en tu sistema.
+1. Desde Docker, arranca el contenedor donde tengas la base de datos de BiciMad.
+   
+2. Abre una terminal o línea de comandos en tu sistema.
 
-2. Clona el repositorio con el siguiente comando:
+3. Clona el repositorio con el siguiente comando:
 
     ```
     git clone https://github.com/202006359/Practica-6-Arquitecturas-RESTful
     ```
 
-3. Inicializa el servidor Jupyter Notebook desde Anaconda.
-<img width="249" alt="image" src="https://github.com/202006359/Practica-1-UDP/assets/113789409/8347b6ac-c6fb-42b4-8620-f8b7634689c4">
+4. Dirigete a la carpeta donde hayas clonado el proyecto y abre la carpeta Practica 1.1
 
-  
-5. Esto abrirá una ventana del navegador web con el panel de control de Jupyter Notebook. Desde aquí, dirigite a la proyecto Practica-6-Arquitecturas-RESTful y picha en la carpeta "Practica 1.1". A continuación, abre el archivo "server.ipynb".  
+5. Una vez en la carpeta, desde la terminal ejecuta el siguiente comando para arrancar el servidor:
 
-6. Ejecuta el código del servidor en Jupyter Notebook ejecutando todas las celdas de código en "server.ipynb".
+    ```
+    py "server.py"
+    ```
 
-7. Abre la aplicacion Postman (o similar).
+6. Con el servidor ya arrancado, se recomienda usar la aplicación Postman, o similar, para probar las funcionalidades descritas en el apartado *Explicación del código*.
 
-
-*Para ejecutar la practica 1.2 es exactamente el mismo proceso, salvo que en el paso 5 abrimos la carperta Práctica 1.2 en vez de la carpeta Práctica 1.1*
+*Para ejecutar la practica 1.2 es exactamente el mismo proceso, salvo que en el paso 3 abrimos la carperta Práctica 1.2 en vez de la carpeta Práctica 1.1*
 
 ## Capturas de pantalla (Practica 1.1 & Practica 1.2)
 ### Practica 1.1

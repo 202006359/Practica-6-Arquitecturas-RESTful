@@ -8,7 +8,26 @@ El código desarrollado se divide en dos partes: el Practica 1.1 y Practica 1.2.
 
 ### Practica 1.1
 #### 1. Servidor (`server.ipynb`)
+##### Autenticación de Usuario
 
+Se implementa un sistema de autenticación de usuario utilizando HTTP Basic Auth. Actualmente, solo se permite la autenticación de un usuario administrador ('admin'/'admin'). 
+
+##### Consultas GET
+
+1. `/fechas_disponibles`: Consulta la cantidad de fechas disponibles en la base de datos.
+2. `/idunplug_station_origen`: Consulta los códigos de las estaciones de origen.
+3. `/idplug_station_destino`: Consulta los códigos de las estaciones de destino.
+4. `/movimientos_por_dia/<fecha>`: Recupera todos los movimientos para una fecha específica.
+5. `/movimientos_por_dia_origen/<fecha>/<idunplug_base>`: Recupera los movimientos para una fecha que inician en una estación de origen específica.
+6. `/movimientos_por_dia_destino/<fecha>/<idplug_base>`: Recupera los movimientos para una fecha que terminan en una estación de destino específica.
+7. `/movimientos_por_dia_origen_destino/<fecha>/<idunplug_base>/<idplug_base>`: Recupera los movimientos para una fecha que inician en una estación de origen y terminan en una estación de destino específicas.
+8. `/movimientos_por_dia_origen_destino_duracion_inferior/<fecha>/<idunplug_base>/<idplug_base>/<max_duracion>`: Recupera los movimientos para una fecha que inician en una estación de origen, terminan en una estación de destino y tienen una duración de trayecto inferior a un valor específico.
+9. `/movimientos_por_dia_origen_destino_duracion_superior/<fecha>/<idunplug_base>/<idplug_base>/<min_duracion>`: Recupera los movimientos para una fecha que inician en una estación de origen, terminan en una estación de destino y tienen una duración de trayecto superior a un valor específico.
+10. `/verificar_nuevos_movimientos`: Ruta adicional para verificar si se ha agregado una nueva línea en la base de datos.
+
+##### Consulta POST
+
+1. `/nuevo_movimiento`: Permite introducir una nueva línea en la base de datos con información específica sobre un movimiento de bicicleta. Requiere autenticación de usuario administrador.
 ## Ejecución del código 
 1. Desde Docker, arranca el contenedor donde tengas la base de datos de BiciMad.
    

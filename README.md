@@ -24,10 +24,18 @@ Se implementa un sistema de autenticación de usuario utilizando HTTP Basic Auth
 8. `/movimientos_por_dia_origen_destino_duracion_inferior/<fecha>/<idunplug_base>/<idplug_base>/<max_duracion>`: Recupera los movimientos para una fecha que inician en una estación de origen, terminan en una estación de destino y tienen una duración de trayecto inferior a un valor específico.
 9. `/movimientos_por_dia_origen_destino_duracion_superior/<fecha>/<idunplug_base>/<idplug_base>/<min_duracion>`: Recupera los movimientos para una fecha que inician en una estación de origen, terminan en una estación de destino y tienen una duración de trayecto superior a un valor específico.
 10. `/verificar_nuevos_movimientos`: Ruta adicional para verificar si se ha agregado una nueva línea en la base de datos.
+11. Con la práctica 1.2 las consultas get verifican que el usuario este autenticado con admin:admin para poder ver todos los resultados. En su defecto se muestran solo 10.
 
 ##### Consulta POST
 
 1. `/nuevo_movimiento`: Permite introducir una nueva línea en la base de datos con información específica sobre un movimiento de bicicleta. Requiere autenticación de usuario administrador.
+
+##### Consulta PUT
+1. `/actualizar_movimiento`: Permite actualizar el travel_time de una entrada específica.
+
+##### Consulta DELETE
+1. `/borrar_movimiento`: Permite borrar una entrada específica.
+
 ## Ejecución del código 
 1. Desde Docker, arranca el contenedor donde tengas la base de datos de BiciMad.
    

@@ -11,7 +11,26 @@ El código desarrollado se divide en dos partes: el Practica 1.1 y Practica 1.2.
 ##### Autenticación de Usuario
 
 Se implementa un sistema de autenticación de usuario utilizando HTTP Basic Auth. Actualmente, solo se permite la autenticación de un usuario administrador ('admin'/'admin'). 
+```
+# Función para autenticar el usuario
+@auth.verify_password
+def verify(username, password):                         
+   if username == 'admin' and password == 'admin':
+      return True
+return False
+```
+#### Ejecucuión de Queries
 
+Se implementa una función para la ejecución de consultas SQL en la base de datos MySQL (*BiciMad*):
+```
+# Función para ejecutar consultas SQL
+def execute_query(query):
+    cursor = connection.cursor()
+    cursor.execute(query)
+    result = cursor.fetchall()
+    cursor.close()
+    return result
+```
 ##### Consultas GET
 
 1. `/fechas_disponibles`: Consulta la cantidad de fechas disponibles en la base de datos.
@@ -41,9 +60,8 @@ Se implementa un sistema de autenticación de usuario utilizando HTTP Basic Auth
 ## Configuración de la Base de Datos
 Asegúrese de tener una la de datos MySQL llamada 'ssdd' con las siguientes credenciales:
 
-   Host: localhost
-   Usuario: root
-   Contraseña: ic@!SQL19
+<img width="600" alt="image" src="https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/f07bacc3-4f7e-4b6a-8e37-4ce56082808b">
+
    
 ## Ejecución del código 
 1. Desde Docker, arranca el contenedor donde tengas la base de datos de BiciMad (ssdd).
@@ -62,7 +80,9 @@ Asegúrese de tener una la de datos MySQL llamada 'ssdd' con las siguientes cred
 
     ```
     py "server.py"
+    
     ```
+    <img width="800" alt="image" src="https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/d551d2b1-cf55-4e18-8cb2-a3ef640ef0f8">
 
 6. Con el servidor ya arrancado, se recomienda usar la aplicación Postman, o similar, para probar las funcionalidades descritas en el apartado *Explicación del código*.
 

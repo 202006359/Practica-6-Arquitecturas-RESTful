@@ -86,9 +86,9 @@ Se implementa un sistema de autenticación de usuario utilizando HTTP Basic Auth
 #### Prueba POST con autentificación.
 1.1 `/nuevo_movimiento` (*Headers*)
 ![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/ef94d90f-e099-4f33-bd9b-b04383a257d2)
-1.2 `/nuevo_movimiento` (*JSON*)
+1.2`/nuevo_movimiento` (*JSON*)
 ![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/28d781da-f113-4d3f-8b23-8c390e744b97)
-1.3 `/verificar_nuevos_movimientos`
+1.3`/verificar_nuevos_movimientos`
 ![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/27b8a646-2336-4a21-99ba-2a631a6c4a21)
 
 ### Practica 1.2

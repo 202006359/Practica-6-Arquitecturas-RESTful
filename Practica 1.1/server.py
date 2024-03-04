@@ -15,7 +15,7 @@ connection = mysql.connector.connect(host='localhost',
 
 # Función para autenticar el usuario
 @auth.verify_password
-def verify(username, password):                         #Mejorar para que los usuarios se guarden en un fichero txt.
+def verify(username, password):                         
     if username == 'admin' and password == 'admin':
         return True
     return False

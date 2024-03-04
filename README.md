@@ -24,11 +24,13 @@ Se implementa un sistema de autenticación de usuario utilizando HTTP Basic Auth
 8. `/movimientos_por_dia_origen_destino_duracion_inferior/<fecha>/<idunplug_base>/<idplug_base>/<max_duracion>`: Recupera los movimientos para una fecha que inician en una estación de origen, terminan en una estación de destino y tienen una duración de trayecto inferior a un valor específico.
 9. `/movimientos_por_dia_origen_destino_duracion_superior/<fecha>/<idunplug_base>/<idplug_base>/<min_duracion>`: Recupera los movimientos para una fecha que inician en una estación de origen, terminan en una estación de destino y tienen una duración de trayecto superior a un valor específico.
 10. `/verificar_nuevos_movimientos`: Ruta adicional para verificar si se ha agregado una nueva línea en la base de datos.
-11. Con la práctica 1.2 las consultas get verifican que el usuario este autenticado con admin:admin para poder ver todos los resultados. En su defecto se muestran solo 10.
 
 ##### Consulta POST
-
 1. `/nuevo_movimiento`: Permite introducir una nueva línea en la base de datos con información específica sobre un movimiento de bicicleta. Requiere autenticación de usuario administrador.
+
+### Practica 1.2
+##### Consultas GET
+1. Las consultas GET de la Practica 1.1 ahora verifican que el usuario este autenticado con admin:admin para poder ver todos los resultados. En su defecto se muestran solo 10.
 
 ##### Consulta PUT
 1. `/actualizar_movimiento`: Permite actualizar el travel_time de una entrada específica.
@@ -57,15 +59,38 @@ Se implementa un sistema de autenticación de usuario utilizando HTTP Basic Auth
 
 6. Con el servidor ya arrancado, se recomienda usar la aplicación Postman, o similar, para probar las funcionalidades descritas en el apartado *Explicación del código*.
 
-*Para ejecutar la practica 1.2 es exactamente el mismo proceso, salvo que en el paso 3 abrimos la carperta Práctica 1.2 en vez de la carpeta Práctica 1.1*
+*Para ejecutar la Practica 1.2 es exactamente el mismo proceso, salvo que en el paso 3 abrimos la carperta Práctica 1.2 en vez de la carpeta Práctica 1.1*
 
 ## Pruebas realizadas (Practica 1.1 & Practica 1.2)
 ### Practica 1.1
 #### Pruebas GET
-*Se observa que los mensajes de los clientes NO han seguido el orden correcto de impresión*
-<img width="595" alt="image" src="https://github.com/202006359/Practica-5-Multithreading/assets/113789409/52ab0952-24f8-40d3-a513-5f47ca13dab9">
+`/fechas_disponibles`
+![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/68a11f88-bee7-456c-b21b-ef577f8dd2ea)
+
+![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/580cb7a2-f4c2-4b8b-af89-5a4de8541bb6)
+
+![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/b1f6dd26-5a52-4df7-8255-438f56daf08c)
+
+![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/4fecfd9b-3d95-4e9c-9118-9700ea1ac38e)
+
+![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/8f0c2208-03e0-47d9-ba81-fc2a71e610eb)
+
+![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/e46a58ee-e21f-40c6-92a6-cd1768b8c4e1)
+
+![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/e89bc148-2707-45c1-ace6-ba3528d002e5)
+
+![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/44d6c8c3-34d1-421c-b3f2-108aad51374b)
+
+![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/f846ba44-6906-4682-be02-b05f9e932731)
 
 #### Prueba POST con autentificación.
+Headers
+![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/ef94d90f-e099-4f33-bd9b-b04383a257d2)
+Contenido del JSON
+![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/28d781da-f113-4d3f-8b23-8c390e744b97)
+
+Comprobamos la correcta ejecución
+![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/27b8a646-2336-4a21-99ba-2a631a6c4a21)
 
 ### Apartado 1.2
 #### Servidor

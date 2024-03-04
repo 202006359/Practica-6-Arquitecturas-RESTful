@@ -65,7 +65,7 @@ def execute_query(query):
 1. `/actualizar_movimiento`: Permite actualizar el travel_time de una entrada específica.
 
 ##### Consulta DELETE
-1. `/borrar_movimiento`: Permite borrar una entrada específica.
+1. `/eliminar_movimiento`: Permite borrar una entrada específica.
 
 ## Configuración de la Base de Datos
 Asegúrese de tener una la de datos MySQL llamada 'ssdd' con las siguientes credenciales:

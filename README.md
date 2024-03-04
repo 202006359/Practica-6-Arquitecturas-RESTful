@@ -64,41 +64,35 @@ Se implementa un sistema de autenticación de usuario utilizando HTTP Basic Auth
 ## Pruebas realizadas (Practica 1.1 & Practica 1.2)
 ### Practica 1.1
 #### Pruebas GET
-`/fechas_disponibles`
+1. `/fechas_disponibles`
 ![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/68a11f88-bee7-456c-b21b-ef577f8dd2ea)
-
+2. `/idunplug_station_origen`
 ![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/580cb7a2-f4c2-4b8b-af89-5a4de8541bb6)
-
+3. `/idplug_station_destino`
 ![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/b1f6dd26-5a52-4df7-8255-438f56daf08c)
-
+4. `/movimientos_por_dia/<fecha>`
 ![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/4fecfd9b-3d95-4e9c-9118-9700ea1ac38e)
-
+5. `/movimientos_por_dia_origen/<fecha>/<idunplug_base>`
 ![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/8f0c2208-03e0-47d9-ba81-fc2a71e610eb)
-
+6. `/movimientos_por_dia_destino/<fecha>/<idplug_base>`
 ![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/e46a58ee-e21f-40c6-92a6-cd1768b8c4e1)
-
+7. `/movimientos_por_dia_origen_destino/<fecha>/<idunplug_base>/<idplug_base>`
 ![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/e89bc148-2707-45c1-ace6-ba3528d002e5)
-
+8. `/movimientos_por_dia_origen_destino_duracion_inferior/<fecha>/<idunplug_base>/<idplug_base>/<max_duracion>`
 ![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/44d6c8c3-34d1-421c-b3f2-108aad51374b)
-
+9. `/movimientos_por_dia_origen_destino_duracion_superior/<fecha>/<idunplug_base>/<idplug_base>/<min_duracion>`
 ![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/f846ba44-6906-4682-be02-b05f9e932731)
 
 #### Prueba POST con autentificación.
-Headers
+1.1 `/nuevo_movimiento` (*Headers*)
 ![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/ef94d90f-e099-4f33-bd9b-b04383a257d2)
-Contenido del JSON
+1.2 `/nuevo_movimiento` (*JSON*)
 ![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/28d781da-f113-4d3f-8b23-8c390e744b97)
-
-Comprobamos la correcta ejecución
+1.3 `/verificar_nuevos_movimientos`
 ![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/27b8a646-2336-4a21-99ba-2a631a6c4a21)
 
-### Apartado 1.2
-#### Servidor
-*Se observa que los mensajes de los clientes SI han seguido el orden correcto de impresión*
-<img width="595" alt="image" src="https://github.com/202006359/Practica-5-Multithreading/assets/113789409/d1d37ad4-48a8-45d5-92c1-d6d14d96fceb">
-
-#### Emulador de clientes.
-<img width="595" alt="image" src="https://github.com/202006359/Practica-5-Multithreading/assets/113789409/8afd2c96-bad0-419f-bcda-e65fb320fc29">
+### Practica 1.2
+VICENTE
 
 
 

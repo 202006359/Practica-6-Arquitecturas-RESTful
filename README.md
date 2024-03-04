@@ -50,6 +50,16 @@ def execute_query(query):
 ### Practica 1.2
 ##### Consultas GET
 1. Las consultas GET de la Practica 1.1 ahora verifican que el usuario este autenticado con admin:admin para poder ver todos los resultados. En su defecto se muestran solo 10.
+   Esto se consigue añadiendo 1 línea y modificando las queries. Aquí se tiene un ejemplo
+   ```
+   @app.route('/idunplug_station_origen', methods=['GET'])
+   def get_base_stations_origen():
+      limite = "" if auth.current_user() else " LIMIT 10"
+       query = f"SELECT DISTINCT idunplug_station FROM bicimad {limite}"
+       result = execute_query(query)
+       return jsonify({'Codigos de las Estaciones de origen': [row[0] for row in result]})
+   ```  
+
 
 ##### Consulta PUT
 1. `/actualizar_movimiento`: Permite actualizar el travel_time de una entrada específica.

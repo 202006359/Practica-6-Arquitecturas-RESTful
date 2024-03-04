@@ -129,7 +129,17 @@ Asegúrese de tener una la de datos MySQL llamada 'ssdd' con las siguientes cred
 ![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/113789409/27b8a646-2336-4a21-99ba-2a631a6c4a21)
 
 ### Practica 1.2
-VICENTE
+#### Prueba GET sin autenticación.
+En la imagen no se aprecia pero una vez pruebe usted mismo la applicación observará como solo obtiene 10 resultados en vez de todos
+![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/52907821/5b07993c-7695-4310-ae5c-7ab653bfe880)
+
+#### Prueba PUT
+Se devuelve un 200 lo que implica realizada se ha completado correctamente.
+![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/52907821/5612c980-a7c1-4af8-b217-0a7c076bb819)
+
+#### Prueba DELETE
+También se devuelve un 200 lo que implica realizada se ha completado correctamente.
+![image](https://github.com/202006359/Practica-6-Arquitecturas-RESTful/assets/52907821/00dfb8a0-ca89-4b21-9f45-50059e6c8751)
 
 
 

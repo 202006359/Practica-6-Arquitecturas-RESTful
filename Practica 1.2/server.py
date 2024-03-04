@@ -152,7 +152,7 @@ def actualizar_movimiento():
         return jsonify({'message': 'No se encontró la entrada para actualizar.'}), 404
     return jsonify({'message': 'Movimiento actualizado correctamente.'}), 200  
 #Eliminar una entrada específica
-@app.route('/borrar_movimiento', methods=['DELETE'])
+@app.route('/eliminar_movimiento', methods=['DELETE'])
 @auth.login_required
 def eliminar_movimiento():
     parametros = request.json

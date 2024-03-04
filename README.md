@@ -38,8 +38,15 @@ Se implementa un sistema de autenticación de usuario utilizando HTTP Basic Auth
 ##### Consulta DELETE
 1. `/borrar_movimiento`: Permite borrar una entrada específica.
 
+## Configuración de la Base de Datos
+Asegúrese de tener una la de datos MySQL llamada 'ssdd' con las siguientes credenciales:
+
+   Host: localhost
+   Usuario: root
+   Contraseña: ic@!SQL19
+   
 ## Ejecución del código 
-1. Desde Docker, arranca el contenedor donde tengas la base de datos de BiciMad.
+1. Desde Docker, arranca el contenedor donde tengas la base de datos de BiciMad (ssdd).
    
 2. Abre una terminal o línea de comandos en tu sistema.
 
